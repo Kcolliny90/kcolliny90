@@ -8,70 +8,232 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            color: #f8f8f2;
             line-height: 1.6;
-            margin: 20px;
-            color: #333; /* Default text color */
+            overflow-x: hidden; /* Prevent horizontal scroll */
+            background-color: #1e1e1e;
         }
-        h2, h3 {
-            color: #007bff; /* Primary heading color */
-        }
-        #profile, #projects, #education {
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9; /* Light background for sections */
-        }
-        .profile-info {
+
+        header {
+            background-color: rgba(40, 42, 54, 0.7); /* Slightly more transparent */
+            color: #f8f8f2;
+            padding: 10px 15px; /* Reduced vertical and horizontal padding */
             text-align: center;
-            margin-bottom: 20px;
+            position: fixed; /* Make header fixed */
+            top: 0;
+            left: 0;
+            width: 100%; /* Ensure it spans the entire width */
+            z-index: 10;
+            box-sizing: border-box; /* Include padding and border in the width */
+            display: flex;
+            flex-direction: column; /* Stack elements vertically by default */
+            align-items: center;
         }
-        .profile-image {
+
+        header p {
+            margin-bottom: 3px; /* Reduced margin for the email and dynamic subtitle */
+            font-size: 0.9em; /* Slightly smaller font size for the email and subtitle */
+        }
+
+        header h1 {
+            margin-bottom: 3px; /* Reduced margin for the name */
+            font-size: 1.5em; /* Slightly smaller font size for the name on smaller screens */
+        }
+
+        header nav {
+            margin-top: 5px; /* Reduced top margin for navigation */
+        }
+
+        header nav a {
+            color: #6272a4;
+            text-decoration: none;
+            margin: 0 8px; /* Reduced horizontal margin for navigation links */
+            font-size: 0.9em; /* Smaller font size for navigation links */
+        }
+
+        header nav a:hover {
+            color: #f8f8f2;
+        }
+
+        main {
+            padding-top: 80px; /* Add padding to avoid content being hidden under fixed header */
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 40px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            padding: 30px;
+            border-radius: 8px;
+            background-color: rgba(40, 42, 54, 0.8); /* Semi-transparent */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            opacity: 0;
+            transform: translateY(10px); /* Reduced slide distance */
+            transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out; /* Slower, smoother transition */
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        section h2 {
+            color: #f8f8f2;
+            border-bottom: 2px solid #6272a4;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        #home {
+            text-align: center;
+        }
+
+        #home img {
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 10px auto;
             display: block;
+            margin: 20px auto;
         }
-        .social-icons a {
-            margin: 0 10px;
-            font-size: 2em;
-            color: #555;
-            text-decoration: none;
+
+        #projects {
+            text-align: center;
         }
-        .social-icons a:hover {
-            color: #007bff;
+
+        .projects-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
         }
+
+        .project-card {
+            background-color: #282a36;
+            color: #f8f8f2;
+            padding: 25px;
+            border-radius: 5px;
+            width: 320px;
+            margin-bottom: 25px;
+            border: 1px solid #44475a; /* Added border */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1); /* Added static shadow */
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease; /* Added transform and border-color */
+        }
+
+        .project-card h3 {
+            margin-top: 0;
+            color: #6272a4;
+        }
+
+        .project-card p {
+            line-height: 1.6;
+        }
+
+        .project-card strong {
+            color: #6272a4;
+        }
+
+        .project-card:hover {
+            background-color: #44475a;
+            box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.02); /* Subtle scale on hover */
+            border-color: #6272a4; /* Border color transition on hover */
+        }
+
+        #about {
+            text-align: center;
+        }
+
+        #about h3 {
+            color: #6272a4;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
         .skill-badge {
-            background-color: #e9ecef;
-            color: #333;
+            background-color: #44475a;
+            color: #f8f8f2;
             padding: 8px 12px;
             border-radius: 5px;
-            margin-right: 5px;
-            margin-bottom: 5px;
-            display: inline-block;
-            border: 1px solid #ccc;
+            font-size: 0.9em;
         }
-        .project-card {
-            border: 1px solid #ddd;
-            padding: 15px;
-            margin-bottom: 15px;
-            border-radius: 5px;
-            background-color: white;
+
+        #contact {
+            text-align: center;
         }
-        .project-card h3 {
-            color: #007bff;
-            margin-top: 0;
+
+        .social-icons a {
+            color: #6272a4;
+            margin: 0 10px;
+            font-size: 1.5em; /* Smaller icons */
+            text-decoration: none;
         }
+
+        .social-icons a:hover {
+            color: #f8f8f2;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+        }
+
         footer {
             text-align: center;
-            margin-top: 30px;
-            padding: 10px;
-            background-color: #f0f0f0;
-            border-top: 1px solid #ddd;
-            color: #555;
+            padding: 20px;
+            background-color: #282a36;
+            color: #f8f8f2;
+            position: fixed; /* Footer stays at the bottom */
+            bottom: 0;
+            width: 100%;
+            z-index: 10;
         }
+
+        #learning-journey {
+            text-align: center;
+        }
+
+        .certificate-container {
+            background-color: #282a36;
+            color: #f8f8f2;
+            padding: 25px;
+            border-radius: 5px;
+            width: 90%;
+            max-width: 800px;
+            margin: 30px auto;
+            border: 1px solid #44475a;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .certificate-container h3 {
+            color: #6272a4;
+            margin-top: 0;
+            margin-bottom: 15px;
+        }
+
+        .certificate-container img {
+            width: 90%; /* Adjust for better mobile viewing */
+            max-width: 600px; /* Limit size on larger screens */
+            height: auto;
+            display: block;
+            margin: 15px auto 0;
+            border-radius: 3px;
+            box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.2);
+        }
+
         #scrollToTopBtn {
             display: none;
             position: fixed;
@@ -80,143 +242,159 @@
             z-index: 99;
             border: none;
             outline: none;
-            background-color: #007bff;
+            background-color: #6272a4;
             color: white;
             cursor: pointer;
-            padding: 15px;
+            padding: 12px; /* Slightly smaller button */
             border-radius: 10px;
-            font-size: 16px;
+            font-size: 14px; /* Smaller font */
         }
+
         #scrollToTopBtn:hover {
-            background-color: #0056b3;
+            background-color: #4a5a8c;
         }
 
-        /* Responsive Layout */
-        @media (min-width: 769px) {
-            .container {
-                display: flex;
-                gap: 20px;
-                align-items: flex-start;
-            }
-            #profile {
-                flex: 1;
-            }
-            #projects-education {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-            }
-            #projects {
-                order: -1; /* Projects on top in this container */
-            }
-            #education {
-                order: 1;
-            }
+        /* Responsive adjustments to prevent horizontal scroll */
+        body, main, section, .projects-container, .project-card {
+            max-width: 100%;
+            box-sizing: border-box;
         }
 
+        /* Media Query for screens 768px and smaller (typical for tablets and phones) */
         @media (max-width: 768px) {
-            /* Stack sections for smaller screens */
+            header {
+                padding: 8px 10px; /* Further reduced padding on smaller screens */
+            }
+
+            header p {
+                font-size: 0.8em; /* Even smaller font size on phones */
+                margin-bottom: 3px;
+            }
+
+            header h1 {
+                font-size: 1.2em; /* Smaller name on phones */
+            }
+
+            header nav {
+                margin-top: 3px;
+            }
+
+            header nav a {
+                margin: 0 5px; /* Further reduced navigation link margin */
+                font-size: 0.8em; /* Even smaller navigation links on phones */
+            }
+
+            .social-icons a {
+                font-size: 1.3em; /* Slightly smaller icons on phones */
+                margin: 0 8px;
+            }
+        }
+
+        /* Media Query for even smaller screens (e.g., narrow phones) */
+        @media (max-width: 480px) {
+            header nav a {
+                margin: 0 3px; /* Even tighter navigation spacing */
+            }
+
+            .social-icons a {
+                font-size: 1.1em; /* Even smaller icons on very narrow phones */
+                margin: 0 5px;
+            }
         }
     </style>
 </head>
 <body>
+    <header>
+        <p style="margin-bottom: 3px;">
+            <a href="mailto:kyeyunecollin90@gmail.com" style="text-decoration: none; color: inherit;">
+                <i class="fas fa-envelope fa-sm" style="margin-right: 5px; color: #6272a4;"></i>
+                kyeyunecollin90@gmail.com
+            </a>
+        </p>
+        <h1>Collin Kyeyune</h1>
+        <p>An Analyst <span id="dynamic-subtitle"></span></p>
+        <nav>
+            <a href="#home">Home</a> | <a href="#projects">Projects</a> | <a href="#about">About Me</a> | <a href="#contact">Contact</a>
+        </nav>
+    </header>
 
-    <div class="container">
-        <section id="profile">
-            <h2>Profile</h2>
-            <div class="profile-info">
-                <img src="profile.jpg" alt="Your Profile Picture" class="profile-image">
-                <h3>Collin Kyeyune</h3>
-                <p>Data Analyst</p>
-                <p>Based in Kampala, Uganda</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/collin-kyeyune-25a366241" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
-                    <a href="https://github.com/yourgithubhandle" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-2x"></i></a>
-                    <a href="mailto:kyeyunecollin90@gmail.com" aria-label="Email"><i class="fas fa-envelope fa-2x"></i></a>
+    <main>
+        <section id="home">
+            <img src="profile.jpg" alt="Your Profile Picture" style="width: 150px; height: 150px; border-radius: 50%; object-fit: cover; display: block; margin: 20px auto;">
+            <h2>Welcome!</h2>
+            <p>From data collection, analysis, interpretation, and visualization to supporting informed decision-making.</p>
+            <p>This is my online portfolio where I'll be showcasing my journey and work in data analysis. Stay tuned for project updates!</p>
+            <hr style="border: 0; height: 1px; background: #6272a4; margin: 30px auto; width: 60%;">
+        </section>
+
+        <section id="elevator-pitch">
+            <h2>My Elevator Pitch</h2>
+            <div class="video-container">
+                <iframe width="315" height="177" src="YOUR_YOUTUBE_EMBED_URL_HERE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <h3><i class="fas fa-chart-bar"></i> Example Data Analysis Project 1</h3>
+                    <p>A brief description of this example data analysis project.</p>
+                    <p><strong>Tools:</strong> Python, Pandas, Matplotlib</p>
+                </div>
+                <div class="project-card">
+                    <h3><i class="fas fa-eye"></i> Example Data Visualization Project 2</h3>
+                    <p>Another brief description of a data visualization project.</p>
+                    <p><strong>Tools:</strong> Power BI, Tableau</p>
+                </div>
+                <div class="project-card">
+                    <h3><i class="fas fa-brain"></i> Example Machine Learning Exploration 3</h3>
+                    <p>A short description of a machine learning exploration.</p>
+                    <p><strong>Tools:</strong> Python, Scikit-learn</p>
+                </div>
+                <div class="project-card">
+                    <h3><i class="fas fa-code"></i> Example SQL-Based Analysis 4</h3>
+                    <p>A description of a project focused on data retrieval and analysis using SQL.</p>
+                    <p><strong>Tools:</strong> SQL, PostgreSQL</p>
                 </div>
             </div>
+        </section>
 
-            <h3>About Me</h3>
-            <p>A skilled data analyst with a passion for extracting insights and telling stories through data. With a background in Business Administration (Finance) and specialized training in Data Science & Analytics, I bring a blend of business acumen and technical expertise. I excel in data visualization, statistical analysis, and driving data-driven decisions.</p>
-
+        <section id="about">
+            <h2>About Me</h2>
+            <p>A brief introduction about yourself and your journey into data analysis.</p>
+            <h3>What Excites Me</h3>
+            <p>The potential of data to drive strategic decisions and uncover hidden patterns.</p>
             <h3>Skills</h3>
-            <div>
+            <div class="skills-container">
                 <span class="skill-badge">Data Preparation</span>
-                <span class="skill-badge">Data Analysis and Interpretation</span>
-                <span class="skill-badge">Communication and Reporting</span>
-                <span class="skill-badge">Collaboration and Improvement</span>
+                <span class="skill-badge">Data Analysis</span>
+                <span class="skill-badge">Data Visualization</span>
+                <span class="skill-badge">Communicating Insights</span>
+            </div>
+            <h3>Tools</h3>
+            <div class="skills-container">
                 <span class="skill-badge">Excel</span>
                 <span class="skill-badge">SQL</span>
                 <span class="skill-badge">Power BI</span>
                 <span class="skill-badge">Python</span>
             </div>
+            <h3>Learning Journey</h3>
+            <div class="certificate-container">
+                <h3>My Certificates</h3>
+                <p>This space will showcase your certificates. You can replace the placeholder image below.</p>
+                <img src="placeholder-certificate.png" alt="Certificate Placeholder">
+            </div>
+            <h3>My Goals</h3>
+            <p>To leverage my analytical skills to contribute to data-driven solutions that have a meaningful impact on organizational success.</p>
+            <hr style="border: 0; height: 1px; background: #6272a4; margin: 30px auto; width: 60%;">
         </section>
 
-        <div id="projects-education">
-            <section id="projects">
-                <h2>Projects</h2>
-                <div class="project-card">
-                    <h3>Example Data Analysis Project 1</h3>
-                    <p>A brief description of this example data analysis project.</p>
-                    <p><strong>Tools:</strong> Python, Pandas, Matplotlib</p>
-                </div>
-                <div class="project-card">
-                    <h3>Example Data Visualization Project 2</h3>
-                    <p>Another brief description of a data visualization project.</p>
-                    <p><strong>Tools:</strong> Power BI, Tableau</p>
-                </div>
-                <div class="project-card">
-                    <h3>Example Machine Learning Exploration 3</h3>
-                    <p>A short description of a machine learning exploration.</p>
-                    <p><strong>Tools:</strong> Python, Scikit-learn</p>
-                </div>
-                <div class="project-card">
-                    <h3>Example SQL-Based Analysis 4</h3>
-                    <p>A description of a project focused on data retrieval and analysis using SQL.</p>
-                    <p><strong>Tools:</strong> SQL, PostgreSQL</p>
-                </div>
-            </section>
-
-            <section id="education">
-                <h2>Education</h2>
-                <div class="education-item">
-                    <h3>Bachelors degree in Business Administration (Finance)</h3>
-                    <p>Makerere University</p>
-                </div>
-                <div class="education-item">
-                    <h3>ALX Professional Foundations Certificate</h3>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2025 Collin Kyeyune</p>
-    </footer>
-
-    <button id="scrollToTopBtn">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script>
-        let scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        }
-
-        scrollToTopBtn.onclick = function() {
-            document.body.scrollTop = 0; // For Safari
-            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-        }
-    </script>
-
-</body>
-</html>
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Feel free to reach out if you have any questions or opportunities!</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/collin-kyeyune-25a366241" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Kcolliny90" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="mailto:kyeyunecollin90@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+            </div>
