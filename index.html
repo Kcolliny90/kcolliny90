@@ -79,12 +79,7 @@
             border: 1px solid #eee;
             border-radius: 5px;
             background-color: white;
-            cursor: pointer; /* Indicate it's clickable */
-            text-decoration: none; /* Remove default link underline */
-            color: inherit; /* Inherit text color from parent */
-        }
-        .project-card:hover {
-            background-color: #f0f0f0; /* Subtle hover effect */
+            cursor: pointer;
         }
         .project-card h3 {
             color: black;
@@ -108,6 +103,14 @@
             color: blue;
             text-decoration: none;
             font-size: 0.9em;
+        }
+        .project-details {
+            display: none; /* Hidden by default */
+            margin-top: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background-color: #f9f9f9;
         }
         .education-item {
             margin-bottom: 15px;
@@ -207,26 +210,49 @@
 
         <section id="projects">
             <h2 style="color: black; text-align: left;">Projects</h2>
-            <a href="#" class="project-card" onclick="event.stopPropagation();">
+            <div class="project-card" onclick="showProjectDetails('project1')">
                 <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example Data Analysis Project 1</strong></h3>
                 <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Python</span> <span class="skill-badge">Pandas</span> <span class="skill-badge">Matplotlib</span></p>
-                <p class="project-description" style="text-align: left;">A brief description of this example data analysis project. <a href="#" class="read-more">Read more</a></p>
-            </a>
-            <a href="#" class="project-card" onclick="event.stopPropagation();">
+                <p class="project-description" style="text-align: left;">A brief description of this project. <a href="#" class="read-more">Read more</a></p>
+            </div>
+            <div class="project-details" id="project1-details">
+                <h3>Detailed Information for Example Data Analysis Project 1</h3>
+                <p>This section contains much more in-depth information about the project, including methodologies, challenges, results, and potentially links to the live project or a repository.</p>
+                <button onclick="hideProjectDetails('project1')">Back to Projects</button>
+            </div>
+
+            <div class="project-card" onclick="showProjectDetails('project2')">
                 <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example Data Visualization Project 2</strong></h3>
                 <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Power BI</span> <span class="skill-badge">Tableau</span></p>
-                <p class="project-description" style="text-align: left;">Another brief description of a data visualization project. <a href="#" class="read-more">Read more</a></p>
-            </a>
-            <a href="#" class="project-card" onclick="event.stopPropagation();">
+                <p class="project-description" style="text-align: left;">Another brief description.</p>
+            </div>
+            <div class="project-details" id="project2-details">
+                <h3>Detailed Information for Example Data Visualization Project 2</h3>
+                <p>More details about the data visualization project.</p>
+                <button onclick="hideProjectDetails('project2')">Back to Projects</button>
+            </div>
+
+            <div class="project-card" onclick="showProjectDetails('project3')">
                 <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example Machine Learning Exploration 3</strong></h3>
                 <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Python</span> <span class="skill-badge">Scikit-learn</span></p>
-                <p class="project-description" style="text-align: left;">A short description of a machine learning exploration. <a href="#" class="read-more">Read more</a></p>
-            </a>
-            <a href="#" class="project-card" onclick="event.stopPropagation();">
+                <p class="project-description" style="text-align: left;">A short description.</p>
+            </div>
+            <div class="project-details" id="project3-details">
+                <h3>Detailed Information for Example Machine Learning Exploration 3</h3>
+                <p>In-depth details about the machine learning project.</p>
+                <button onclick="hideProjectDetails('project3')">Back to Projects</button>
+            </div>
+
+            <div class="project-card" onclick="showProjectDetails('project4')">
                 <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example SQL-Based Analysis 4</strong></h3>
                 <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">SQL</span> <span class="skill-badge">PostgreSQL</span></p>
-                <p class="project-description" style="text-align: left;">A description of a project focused on data retrieval and analysis using SQL. <a href="#" class="read-more">Read more</a></p>
-            </a>
+                <p class="project-description" style="text-align: left;">A description of a SQL project.</p>
+            </div>
+            <div class="project-details" id="project4-details">
+                <h3>Detailed Information for Example SQL-Based Analysis 4</h3>
+                <p>More comprehensive information about the SQL analysis project.</p>
+                <button onclick="hideProjectDetails('project4')">Back to Projects</button>
+            </div>
         </section>
 
         <section id="education">
@@ -251,22 +277,31 @@
     </button>
 
     <script>
-        let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+        function showProjectDetails(projectId) {
+            // Hide all project cards
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                card.style.display = 'none';
+            });
 
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
+            // Show the specific project details
+            const detailsDiv = document.getElementById(projectId + '-details');
+            if (detailsDiv) {
+                detailsDiv.style.display = 'block';
             }
         }
 
-        scrollToTopBtn.onclick = function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
+        function hideProjectDetails(projectId) {
+            // Hide the specific project details
+            const detailsDiv = document.getElementById(projectId + '-details');
+            if (detailsDiv) {
+                detailsDiv.style.display = 'none';
+            }
+
+            // Show all project cards again
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach(card => {
+                card.style.display = 'block';
             });
         }
     </script>
