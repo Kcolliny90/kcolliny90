@@ -9,34 +9,33 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 0; /* Remove default body margin */
-            color: black; /* Default text color is black */
-            background-color: white; /* Default background is white */
+            margin: 0;
+            color: black;
+            background-color: white;
         }
         h2, h3 {
-            color: black; /* Headings are black */
+            color: black;
         }
         #profile, #projects, #education {
             margin-bottom: 20px;
             padding: 15px;
-            border-bottom: 1px solid #ccc; /* Simple separator */
+            border-bottom: 1px solid #ccc;
         }
         .profile-info {
-            text-align: left; /* Left align on phone screens */
+            text-align: center; /* Center the initial elements */
             margin-bottom: 15px;
-            display: flex; /* For aligning image and text */
-            align-items: center; /* Vertically align image and text */
         }
         .profile-image {
-            width: 80px; /* Smaller profile image on phone */
-            height: 80px;
+            width: 100px; /* Slightly larger than before */
+            height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 15px; /* Space between image and text */
-            display: inline-block;
+            margin: 10px auto; /* Center the image */
+            display: block; /* Ensure it takes its own line */
         }
         .contact-info {
             margin-bottom: 5px;
+            text-align: center; /* Center contact info */
         }
         .contact-info a {
             color: black;
@@ -47,9 +46,12 @@
             font-size: 0.7em;
             color: black;
         }
+        .social-icons {
+            text-align: center; /* Center social icons */
+        }
         .social-icons a {
             margin: 0 5px;
-            font-size: 1.2em; /* Smaller icons */
+            font-size: 1.2em;
             color: black;
             text-decoration: none;
         }
@@ -58,7 +60,7 @@
         }
         .skill-badge {
             background-color: #f0f0f0;
-            color: blue; /* Skills and tools are blue */
+            color: blue;
             padding: 5px 8px;
             border-radius: 3px;
             margin-right: 3px;
@@ -73,22 +75,22 @@
             border-bottom: 1px solid #eee;
         }
         .project-card h3 {
-            color: black; /* Project titles are black */
-            font-weight: bold; /* Project titles are bold */
+            color: black;
+            font-weight: bold;
             margin-top: 0;
             margin-bottom: 5px;
         }
         .project-tools {
-            color: blue; /* Project tools are blue */
+            color: blue;
             font-size: 0.9em;
             margin-bottom: 5px;
         }
         .project-description {
-            color: black; /* Project description is black */
+            color: black;
             font-size: 0.95em;
         }
         .read-more {
-            color: blue; /* "Read more" link is blue */
+            color: blue;
             text-decoration: none;
             font-size: 0.9em;
         }
@@ -100,8 +102,8 @@
             margin-bottom: 3px;
         }
         .education-item strong {
-            color: black; /* "Data Analytics" is black */
-            font-weight: bold; /* "Data Analytics" is bold */
+            color: black;
+            font-weight: bold;
         }
         footer {
             text-align: center;
@@ -131,15 +133,15 @@
             background-color: #0056b3;
         }
 
-        /* Responsive Layout (Stack for all screen sizes for simplicity in Google Sites) */
+        /* Responsive Layout (Stack for all screen sizes) */
         .container {
             display: flex;
-            flex-direction: column; /* Stack on all screen sizes for easier Google Sites implementation */
-            align-items: stretch; /* Make sections take full width */
+            flex-direction: column;
+            align-items: stretch;
         }
         #projects-education {
             display: flex;
-            flex-direction: column; /* Stack Projects and Education */
+            flex-direction: column;
             align-items: stretch;
         }
     </style>
@@ -148,30 +150,28 @@
 
     <div class="container">
         <section id="profile">
-            <h2>Profile</h2>
+            <h2 style="color: black; text-align: center;">Profile</h2>
             <div class="profile-info">
-                <img src="profile.jpg" alt="Your Profile Picture" class="profile-image" style="width: 80px; height: 80px;">
-                <div>
-                    <h3 style="color: black; font-weight: bold; margin-top: 0; margin-bottom: 5px;">Collin Kyeyune</h3>
-                    <p class="contact-info">
-                        <a href="mailto:kyeyunecollin90@gmail.com" style="color: black;">
-                            <i class="fas fa-envelope fa-sm" style="color: black;"></i> kyeyunecollin90@gmail.com
-                        </a>
-                    </p>
-                    <p style="color: black;">Data Analyst</p>
-                    <p style="color: black;">Based in Kampala, Uganda</p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/collin-kyeyune-25a366241" target="_blank" aria-label="LinkedIn" style="color: black;"><i class="fab fa-linkedin"></i></a>
-                        <a href="https://github.com/Kcolliny90" target="_blank" aria-label="GitHub" style="color: black;"><i class="fab fa-github"></i></a>
-                        <a href="mailto:kyeyunecollin90@gmail.com" aria-label="Email" style="color: black;"><i class="fas fa-envelope"></i></a>
-                    </div>
+                <img src="profile.jpg" alt="Your Profile Picture" class="profile-image" style="width: 100px; height: 100px;">
+                <h3 style="color: black; font-weight: bold; margin-top: 10px; margin-bottom: 5px;">Collin Kyeyune</h3>
+                <p class="contact-info">
+                    <a href="mailto:kyeyunecollin90@gmail.com" style="color: black;">
+                        <i class="fas fa-envelope fa-sm" style="color: black;"></i> kyeyunecollin90@gmail.com
+                    </a>
+                </p>
+                <p style="color: black;">Data Analyst</p>
+                <p style="color: black;">Based in Kampala, Uganda</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/collin-kyeyune-25a366241" target="_blank" aria-label="LinkedIn" style="color: black;"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Kcolliny90" target="_blank" aria-label="GitHub" style="color: black;"><i class="fab fa-github"></i></a>
+                    <a href="mailto:kyeyunecollin90@gmail.com" aria-label="Email" style="color: black;"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
 
-            <h3>About Me</h3>
+            <h3 style="color: black;">About Me</h3>
             <p style="color: black;">A skilled data analyst with a passion for extracting insights and telling stories through data. With a background in Business Administration (Finance) and specialized training in Data Science & Analytics, I bring a blend of business acumen and technical expertise. I excel in data visualization, statistical analysis, and driving data-driven decisions.</p>
 
-            <h3>Skills</h3>
+            <h3 style="color: black;">Skills</h3>
             <div>
                 <span class="skill-badge">Data Preparation</span>
                 <span class="skill-badge">Data Analysis and Interpretation</span>
@@ -186,7 +186,7 @@
 
         <div id="projects-education">
             <section id="projects">
-                <h2 style="color: black;">Projects</h2>
+                <h2 style="color: black; text-align: center;">Projects</h2>
                 <div class="project-card">
                     <h3 style="color: black; font-weight: bold;">Example Data Analysis Project 1</h3>
                     <p class="project-tools">Tools: <span class="skill-badge">Python</span>, <span class="skill-badge">Pandas</span>, <span class="skill-badge">Matplotlib</span></p>
@@ -210,7 +210,7 @@
             </section>
 
             <section id="education">
-                <h2 style="color: black;">Education</h2>
+                <h2 style="color: black; text-align: center;">Education</h2>
                 <div class="education-item">
                     <h3>Bachelors degree in Business Administration (Finance)</h3>
                     <p style="color: black;">Makerere University</p>
