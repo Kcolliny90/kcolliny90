@@ -9,21 +9,23 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 0;
+            margin: 20px; /* Add some margin around the whole content */
             color: black;
             background-color: white;
         }
         h2, h3 {
             color: black;
-            text-align: left; /* Left align headings */
+            text-align: left;
         }
         #profile, #projects, #education {
             margin-bottom: 20px;
             padding: 15px;
-            border-bottom: 1px solid #ccc;
+            border: 1px solid #ccc; /* Add a border to see the rounded corners */
+            border-radius: 10px; /* Add rounded corners */
+            background-color: #f9f9f9; /* Light background for sections */
         }
         .profile-info {
-            text-align: left; /* Left align profile info */
+            text-align: left;
             margin-bottom: 15px;
         }
         .profile-image {
@@ -31,13 +33,13 @@
             height: 100px;
             border-radius: 50%;
             object-fit: cover;
-            margin-right: 15px; /* Space between image and text if they were inline */
-            margin-bottom: 10px; /* Space below the image */
-            display: block; /* Keep image on its own line */
+            margin-right: 15px;
+            margin-bottom: 10px;
+            display: block;
         }
         .contact-info {
             margin-bottom: 5px;
-            text-align: left; /* Left align contact info */
+            text-align: left;
         }
         .contact-info a {
             color: black;
@@ -49,7 +51,7 @@
             color: black;
         }
         .social-icons {
-            text-align: left; /* Left align social icons */
+            text-align: left;
         }
         .social-icons a {
             margin: 0 5px;
@@ -61,7 +63,7 @@
             color: blue;
         }
         .skill-badge {
-            background-color: #f0f0f0;
+            background-color: #e9ecef;
             color: blue;
             padding: 5px 8px;
             border-radius: 3px;
@@ -72,27 +74,29 @@
             font-size: 0.9em;
         }
         .project-card {
-            margin-bottom: 15px;
+            margin-bottom: 10px; /* Reduce margin between project cards */
             padding: 10px;
-            border-bottom: 1px solid #eee;
+            border: 1px solid #eee; /* Add a subtle border for project cards */
+            border-radius: 5px; /* Slightly rounded corners for project cards */
+            background-color: white;
         }
         .project-card h3 {
             color: black;
             font-weight: bold;
             margin-top: 0;
             margin-bottom: 5px;
-            text-align: left; /* Left align project titles */
+            text-align: left;
         }
         .project-tools {
             color: blue;
             font-size: 0.9em;
             margin-bottom: 5px;
-            text-align: left; /* Left align project tools */
+            text-align: left;
         }
         .project-description {
             color: black;
             font-size: 0.95em;
-            text-align: left; /* Left align project description */
+            text-align: left;
         }
         .read-more {
             color: blue;
@@ -101,12 +105,15 @@
         }
         .education-item {
             margin-bottom: 15px;
-            padding-left: 10px;
-            text-align: left; /* Left align education items */
+            padding: 10px;
+            border: 1px solid #eee; /* Add a subtle border for education items */
+            border-radius: 5px; /* Slightly rounded corners for education items */
+            text-align: left;
+            background-color: white;
         }
         .education-item h3 {
             margin-bottom: 3px;
-            text-align: left; /* Left align education item headings */
+            text-align: left;
         }
         .education-item strong {
             color: black;
@@ -120,6 +127,7 @@
             border-top: 1px solid #ccc;
             color: black;
             font-size: 0.8em;
+            border-radius: 8px; /* Optional rounded corners for the footer */
         }
         #scrollToTopBtn {
             display: none;
@@ -145,6 +153,8 @@
             display: flex;
             flex-direction: column;
             align-items: stretch;
+            margin: 20px auto; /* Center the container with some margin */
+            max-width: 768px; /* Limit the width for better readability on larger screens */
         }
         #projects-education {
             display: flex;
@@ -170,93 +180,3 @@
                 <p style="color: black; text-align: left;">Based in Kampala, Uganda</p>
                 <div class="social-icons" style="text-align: left;">
                     <a href="https://www.linkedin.com/in/collin-kyeyune-25a366241" target="_blank" aria-label="LinkedIn" style="color: black;"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Kcolliny90" target="_blank" aria-label="GitHub" style="color: black;"><i class="fab fa-github"></i></a>
-                    <a href="mailto:kyeyunecollin90@gmail.com" aria-label="Email" style="color: black;"><i class="fas fa-envelope"></i></a>
-                </div>
-            </div>
-
-            <h3 style="color: black; text-align: left;">About Me</h3>
-            <p style="color: black; text-align: left;">A skilled data analyst with a passion for extracting insights and telling stories through data. With a background in Business Administration (Finance) and specialized training in Data Science & Analytics, I bring a blend of business acumen and technical expertise. I excel in data visualization, statistical analysis, and driving data-driven decisions.</p>
-
-            <h3 style="color: black; text-align: left;">Skills</h3>
-            <div style="text-align: left;">
-                <span class="skill-badge">Data Preparation</span>
-                <span class="skill-badge">Data Analysis and Interpretation</span>
-                <span class="skill-badge">Communication and Reporting</span>
-                <span class="skill-badge">Collaboration and Improvement</span>
-                <span class="skill-badge">Excel</span>
-                <span class="skill-badge">SQL</span>
-                <span class="skill-badge">Power BI</span>
-                <span class="skill-badge">Python</span>
-            </div>
-        </section>
-
-        <div id="projects-education">
-            <section id="projects">
-                <h2 style="color: black; text-align: left;">Projects</h2>
-                <div class="project-card">
-                    <h3 style="color: black; font-weight: bold; text-align: left;">Example Data Analysis Project 1</h3>
-                    <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Python</span>, <span class="skill-badge">Pandas</span>, <span class="skill-badge">Matplotlib</span></p>
-                    <p class="project-description" style="text-align: left;">A brief description of this example data analysis project. <a href="#" class="read-more">Read more</a></p>
-                </div>
-                <div class="project-card">
-                    <h3 style="color: black; font-weight: bold; text-align: left;">Example Data Visualization Project 2</h3>
-                    <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Power BI</span>, <span class="skill-badge">Tableau</span></p>
-                    <p class="project-description" style="text-align: left;">Another brief description of a data visualization project. <a href="#" class="read-more">Read more</a></p>
-                </div>
-                <div class="project-card">
-                    <h3 style="color: black; font-weight: bold; text-align: left;">Example Machine Learning Exploration 3</h3>
-                    <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Python</span>, <span class="skill-badge">Scikit-learn</span></p>
-                    <p class="project-description" style="text-align: left;">A short description of a machine learning exploration. <a href="#" class="read-more">Read more</a></p>
-                </div>
-                <div class="project-card">
-                    <h3 style="color: black; font-weight: bold; text-align: left;">Example SQL-Based Analysis 4</h3>
-                    <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">SQL</span>, <span class="skill-badge">PostgreSQL</span></p>
-                    <p class="project-description" style="text-align: left;">A description of a project focused on data retrieval and analysis using SQL. <a href="#" class="read-more">Read more</a></p>
-                </div>
-            </section>
-
-            <section id="education">
-                <h2 style="color: black; text-align: left;">Education</h2>
-                <div class="education-item" style="text-align: left;">
-                    <h3 style="color: black; text-align: left;">Bachelors degree in Business Administration (Finance)</h3>
-                    <p style="color: black; text-align: left;">Makerere University</p>
-                </div>
-                <div class="education-item" style="text-align: left;">
-                    <h3 style="color: black; text-align: left;"><strong style="color: black;">Data Analytics</strong> Professional Foundations Certificate</h3>
-                </div>
-            </section>
-        </div>
-    </div>
-
-    <footer>
-        <p style="color: black;">© 2025 Collin Kyeyune</p>
-    </footer>
-
-    <button id="scrollToTopBtn">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <script>
-        let scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-        window.onscroll = function() {scrollFunction()};
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-                scrollToTopBtn.style.display = "block";
-            } else {
-                scrollToTopBtn.style.display = "none";
-            }
-        }
-
-        scrollToTopBtn.onclick = function() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-    </script>
-
-</body>
-</html>
