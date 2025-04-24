@@ -9,125 +9,138 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            margin: 20px;
-            color: #333; /* Default text color */
+            margin: 0; /* Remove default body margin */
+            color: black; /* Default text color is black */
+            background-color: white; /* Default background is white */
         }
         h2, h3 {
-            color: #007bff; /* Primary heading color */
+            color: black; /* Headings are black */
         }
         #profile, #projects, #education {
-            margin-bottom: 30px;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9; /* Light background for sections */
+            margin-bottom: 20px;
+            padding: 15px;
+            border-bottom: 1px solid #ccc; /* Simple separator */
         }
         .profile-info {
-            text-align: center;
-            margin-bottom: 20px;
+            text-align: left; /* Left align on phone screens */
+            margin-bottom: 15px;
+            display: flex; /* For aligning image and text */
+            align-items: center; /* Vertically align image and text */
         }
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 80px; /* Smaller profile image on phone */
+            height: 80px;
             border-radius: 50%;
             object-fit: cover;
-            margin: 10px auto;
-            display: block;
+            margin-right: 15px; /* Space between image and text */
+            display: inline-block;
         }
         .contact-info {
-            margin-bottom: 10px;
+            margin-bottom: 5px;
         }
         .contact-info a {
-            color: #555;
+            color: black;
             text-decoration: none;
         }
         .contact-info i {
-            margin-right: 5px;
-            font-size: 0.8em; /* Smaller email icon */
+            margin-right: 3px;
+            font-size: 0.7em;
+            color: black;
         }
         .social-icons a {
-            margin: 0 8px; /* Slightly reduced spacing */
-            font-size: 1.5em; /* Smaller icons */
-            color: #555;
+            margin: 0 5px;
+            font-size: 1.2em; /* Smaller icons */
+            color: black;
             text-decoration: none;
         }
         .social-icons a:hover {
-            color: #007bff;
+            color: blue;
         }
         .skill-badge {
-            background-color: #e9ecef;
-            color: #333;
-            padding: 8px 12px;
-            border-radius: 5px;
-            margin-right: 5px;
-            margin-bottom: 5px;
+            background-color: #f0f0f0;
+            color: blue; /* Skills and tools are blue */
+            padding: 5px 8px;
+            border-radius: 3px;
+            margin-right: 3px;
+            margin-bottom: 3px;
             display: inline-block;
             border: 1px solid #ccc;
+            font-size: 0.9em;
         }
         .project-card {
-            border: 1px solid #ddd;
-            padding: 15px;
             margin-bottom: 15px;
-            border-radius: 5px;
-            background-color: white;
+            padding: 10px;
+            border-bottom: 1px solid #eee;
         }
         .project-card h3 {
-            color: #007bff;
+            color: black; /* Project titles are black */
+            font-weight: bold; /* Project titles are bold */
             margin-top: 0;
+            margin-bottom: 5px;
+        }
+        .project-tools {
+            color: blue; /* Project tools are blue */
+            font-size: 0.9em;
+            margin-bottom: 5px;
+        }
+        .project-description {
+            color: black; /* Project description is black */
+            font-size: 0.95em;
+        }
+        .read-more {
+            color: blue; /* "Read more" link is blue */
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+        .education-item {
+            margin-bottom: 15px;
+            padding-left: 10px;
+        }
+        .education-item h3 {
+            margin-bottom: 3px;
+        }
+        .education-item strong {
+            color: black; /* "Data Analytics" is black */
+            font-weight: bold; /* "Data Analytics" is bold */
         }
         footer {
             text-align: center;
-            margin-top: 30px;
+            margin-top: 20px;
             padding: 10px;
             background-color: #f0f0f0;
-            border-top: 1px solid #ddd;
-            color: #555;
+            border-top: 1px solid #ccc;
+            color: black;
+            font-size: 0.8em;
         }
         #scrollToTopBtn {
             display: none;
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 15px;
+            right: 15px;
             z-index: 99;
             border: none;
             outline: none;
             background-color: #007bff;
             color: white;
             cursor: pointer;
-            padding: 15px;
-            border-radius: 10px;
-            font-size: 16px;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 14px;
         }
         #scrollToTopBtn:hover {
             background-color: #0056b3;
         }
 
-        /* Responsive Layout */
-        @media (min-width: 769px) {
-            .container {
-                display: flex;
-                gap: 20px;
-                align-items: flex-start;
-            }
-            #profile {
-                flex: 1;
-            }
-            #projects-education {
-                flex: 1;
-                display: flex;
-                flex-direction: column;
-                gap: 20px;
-            }
-            #projects {
-                order: -1; /* Projects on top in this container */
-            }
-            #education {
-                order: 1;
-            }
+        /* Responsive Layout (Stack for all screen sizes for simplicity in Google Sites) */
+        .container {
+            display: flex;
+            flex-direction: column; /* Stack on all screen sizes for easier Google Sites implementation */
+            align-items: stretch; /* Make sections take full width */
         }
-
-        @media (max-width: 768px) {
-            /* Stack sections for smaller screens */
+        #projects-education {
+            display: flex;
+            flex-direction: column; /* Stack Projects and Education */
+            align-items: stretch;
         }
     </style>
 </head>
@@ -137,24 +150,26 @@
         <section id="profile">
             <h2>Profile</h2>
             <div class="profile-info">
-                <img src="profile.jpg" alt="Your Profile Picture" class="profile-image">
-                <h3>Collin Kyeyune</h3>
-                <p class="contact-info">
-                    <a href="mailto:kyeyunecollin90@gmail.com">
-                        <i class="fas fa-envelope fa-sm"></i> kyeyunecollin90@gmail.com
-                    </a>
-                </p>
-                <p>Data Analyst</p>
-                <p>Based in Kampala, Uganda</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/collin-kyeyune-25a366241" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/Kcolliny90" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="mailto:kyeyunecollin90@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                <img src="profile.jpg" alt="Your Profile Picture" class="profile-image" style="width: 80px; height: 80px;">
+                <div>
+                    <h3 style="color: black; font-weight: bold; margin-top: 0; margin-bottom: 5px;">Collin Kyeyune</h3>
+                    <p class="contact-info">
+                        <a href="mailto:kyeyunecollin90@gmail.com" style="color: black;">
+                            <i class="fas fa-envelope fa-sm" style="color: black;"></i> kyeyunecollin90@gmail.com
+                        </a>
+                    </p>
+                    <p style="color: black;">Data Analyst</p>
+                    <p style="color: black;">Based in Kampala, Uganda</p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/collin-kyeyune-25a366241" target="_blank" aria-label="LinkedIn" style="color: black;"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Kcolliny90" target="_blank" aria-label="GitHub" style="color: black;"><i class="fab fa-github"></i></a>
+                        <a href="mailto:kyeyunecollin90@gmail.com" aria-label="Email" style="color: black;"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
             </div>
 
             <h3>About Me</h3>
-            <p>A skilled data analyst with a passion for extracting insights and telling stories through data. With a background in Business Administration (Finance) and specialized training in Data Science & Analytics, I bring a blend of business acumen and technical expertise. I excel in data visualization, statistical analysis, and driving data-driven decisions.</p>
+            <p style="color: black;">A skilled data analyst with a passion for extracting insights and telling stories through data. With a background in Business Administration (Finance) and specialized training in Data Science & Analytics, I bring a blend of business acumen and technical expertise. I excel in data visualization, statistical analysis, and driving data-driven decisions.</p>
 
             <h3>Skills</h3>
             <div>
@@ -171,44 +186,44 @@
 
         <div id="projects-education">
             <section id="projects">
-                <h2>Projects</h2>
+                <h2 style="color: black;">Projects</h2>
                 <div class="project-card">
-                    <h3>Example Data Analysis Project 1</h3>
-                    <p>A brief description of this example data analysis project.</p>
-                    <p><strong>Tools:</strong> Python, Pandas, Matplotlib</p>
+                    <h3 style="color: black; font-weight: bold;">Example Data Analysis Project 1</h3>
+                    <p class="project-tools">Tools: <span class="skill-badge">Python</span>, <span class="skill-badge">Pandas</span>, <span class="skill-badge">Matplotlib</span></p>
+                    <p class="project-description">A brief description of this example data analysis project. <a href="#" class="read-more">Read more</a></p>
                 </div>
                 <div class="project-card">
-                    <h3>Example Data Visualization Project 2</h3>
-                    <p>Another brief description of a data visualization project.</p>
-                    <p><strong>Tools:</strong> Power BI, Tableau</p>
+                    <h3 style="color: black; font-weight: bold;">Example Data Visualization Project 2</h3>
+                    <p class="project-tools">Tools: <span class="skill-badge">Power BI</span>, <span class="skill-badge">Tableau</span></p>
+                    <p class="project-description">Another brief description of a data visualization project. <a href="#" class="read-more">Read more</a></p>
                 </div>
                 <div class="project-card">
-                    <h3>Example Machine Learning Exploration 3</h3>
-                    <p>A short description of a machine learning exploration.</p>
-                    <p><strong>Tools:</strong> Python, Scikit-learn</p>
+                    <h3 style="color: black; font-weight: bold;">Example Machine Learning Exploration 3</h3>
+                    <p class="project-tools">Tools: <span class="skill-badge">Python</span>, <span class="skill-badge">Scikit-learn</span></p>
+                    <p class="project-description">A short description of a machine learning exploration. <a href="#" class="read-more">Read more</a></p>
                 </div>
                 <div class="project-card">
-                    <h3>Example SQL-Based Analysis 4</h3>
-                    <p>A description of a project focused on data retrieval and analysis using SQL.</p>
-                    <p><strong>Tools:</strong> SQL, PostgreSQL</p>
+                    <h3 style="color: black; font-weight: bold;">Example SQL-Based Analysis 4</h3>
+                    <p class="project-tools">Tools: <span class="skill-badge">SQL</span>, <span class="skill-badge">PostgreSQL</span></p>
+                    <p class="project-description">A description of a project focused on data retrieval and analysis using SQL. <a href="#" class="read-more">Read more</a></p>
                 </div>
             </section>
 
             <section id="education">
-                <h2>Education</h2>
+                <h2 style="color: black;">Education</h2>
                 <div class="education-item">
                     <h3>Bachelors degree in Business Administration (Finance)</h3>
-                    <p>Makerere University</p>
+                    <p style="color: black;">Makerere University</p>
                 </div>
                 <div class="education-item">
-                    <h3>ALX Professional Foundations Certificate</h3>
+                    <h3><strong style="color: black;">Data Analytics</strong> Professional Foundations Certificate</h3>
                 </div>
             </section>
         </div>
     </div>
 
     <footer>
-        <p>© 2025 Collin Kyeyune</p>
+        <p style="color: black;">© 2025 Collin Kyeyune</p>
     </footer>
 
     <button id="scrollToTopBtn">
