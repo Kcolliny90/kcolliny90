@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collin Kyeyune - Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            color: #333; /* Default text color */
+        }
+        h2, h3 {
+            color: #007bff; /* Primary heading color */
+        }
+        #profile, #projects, #education {
+            margin-bottom: 30px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9; /* Light background for sections */
+        }
+        .profile-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 10px auto;
+            display: block;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            font-size: 2em;
+            color: #555;
+            text-decoration: none;
+        }
+        .social-icons a:hover {
+            color: #007bff;
+        }
+        .skill-badge {
+            background-color: #e9ecef;
+            color: #333;
+            padding: 8px 12px;
+            border-radius: 5px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            display: inline-block;
+            border: 1px solid #ccc;
+        }
+        .project-card {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .project-card h3 {
+            color: #007bff;
+            margin-top: 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-top: 1px solid #ddd;
+            color: #555;
+        }
+        #scrollToTopBtn {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            border: none;
+            outline: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        #scrollToTopBtn:hover {
+            background-color: #0056b3;
+        }
+
+        /* Responsive Layout */
+        @media (min-width: 769px) {
+            .container {
+                display: flex;
+                gap: 20px;
+                align-items: flex-start;
+            }
+            #profile {
+                flex: 1;
+            }
+            #projects-education {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            #projects {
+                order: -1; /* Projects on top in this container */
+            }
+            #education {
+                order: 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            /* Stack sections for smaller screens */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <section id="profile">
+            <h2>Profile</h2>
+            <div class="profile-info">
+                <img src="profile.jpg" alt="Your Profile Picture" class="profile-image">
+                <h3>Collin Kyeyune</h3>
+                <p>Data Analyst</p>
+                <p>Based in Kampala, Uganda</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/collin-kyeyune-25a366241" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://github.com/yourgithubhandle" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="mailto:kyeyunecollin90@gmail.com" aria-label="Email"><i class="fas fa-envelope fa-2x"></i></a>
+                </div>
+            </div>
+
+            <h3>About Me</h3>
+            <p>A skilled data analyst with a passion for extracting insights and telling stories through data. With a background in Business Administration (Finance) and specialized training in Data Science & Analytics, I bring a blend of business acumen and technical expertise. I excel in data visualization, statistical analysis, and driving data-driven decisions.</p>
+
+            <h3>Skills</h3>
+            <div>
+                <span class="skill-badge">Data Preparation</span>
+                <span class="skill-badge">Data Analysis and Interpretation</span>
+                <span class="skill-badge">Communication and Reporting</span>
+                <span class="skill-badge">Collaboration and Improvement</span>
+                <span class="skill-badge">Excel</span>
+                <span class="skill-badge">SQL</span>
+                <span class="skill-badge">Power BI</span>
+                <span class="skill-badge">Python</span>
+            </div>
+        </section>
+
+        <div id="projects-education">
+            <section id="projects">
+                <h2>Projects</h2>
+                <div class="project-card">
+                    <h3>Example Data Analysis Project 1</h3>
+                    <p>A brief description of this example data analysis project.</p>
+                    <p><strong>Tools:</strong> Python, Pandas, Matplotlib</p>
+                </div>
+                <div class="project-card">
+                    <h3>Example Data Visualization Project 2</h3>
+                    <p>Another brief description of a data visualization project.</p>
+                    <p><strong>Tools:</strong> Power BI, Tableau</p>
+                </div>
+                <div class="project-card">
+                    <h3>Example Machine Learning Exploration 3</h3>
+                    <p>A short description of a machine learning exploration.</p>
+                    <p><strong>Tools:</strong> Python, Scikit-learn</p>
+                </div>
+                <div class="project-card">
+                    <h3>Example SQL-Based Analysis 4</h3>
+                    <p>A description of a project focused on data retrieval and analysis using SQL.</p>
+                    <p><strong>Tools:</strong> SQL, PostgreSQL</p>
+                </div>
+            </section>
+
+            <section id="education">
+                <h2>Education</h2>
+                <div class="education-item">
+                    <h3>Bachelors degree in Business Administration (Finance)</h3>
+                    <p>Makerere University</p>
+                </div>
+                <div class="education-item">
+                    <h3>ALX Professional Foundations Certificate</h3>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 Collin Kyeyune</p>
+    </footer>
+
+    <button id="scrollToTopBtn">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        let scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        }
+
+        scrollToTopBtn.onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+    </script>
+
+</body>
+</html>
