@@ -79,10 +79,16 @@
             border: 1px solid #eee;
             border-radius: 5px;
             background-color: white;
+            cursor: pointer; /* Indicate it's clickable */
+            text-decoration: none; /* Remove default link underline */
+            color: inherit; /* Inherit text color from parent */
+        }
+        .project-card:hover {
+            background-color: #f0f0f0; /* Subtle hover effect */
         }
         .project-card h3 {
             color: black;
-            font-weight: bold; /* Project titles are bold */
+            font-weight: bold;
             margin-top: 0;
             margin-bottom: 5px;
             text-align: left;
@@ -117,10 +123,10 @@
         }
         .education-item strong {
             color: black;
-            font-weight: bold; /* Education title (Data Analytics) */
+            font-weight: bold;
         }
         .half-bold {
-            font-weight: 500; /* Slightly less than full bold */
+            font-weight: 500;
         }
         footer {
             text-align: center;
@@ -201,26 +207,26 @@
 
         <section id="projects">
             <h2 style="color: black; text-align: left;">Projects</h2>
-            <div class="project-card">
+            <a href="#" class="project-card" onclick="event.stopPropagation();">
                 <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example Data Analysis Project 1</strong></h3>
-                <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Python</span>, <span class="skill-badge">Pandas</span>, <span class="skill-badge">Matplotlib</span></p>
+                <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Python</span> <span class="skill-badge">Pandas</span> <span class="skill-badge">Matplotlib</span></p>
                 <p class="project-description" style="text-align: left;">A brief description of this example data analysis project. <a href="#" class="read-more">Read more</a></p>
-            </div>
-            <div class="project-card">
+            </a>
+            <a href="#" class="project-card" onclick="event.stopPropagation();">
                 <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example Data Visualization Project 2</strong></h3>
-                <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Power BI</span>, <span class="skill-badge">Tableau</span></p>
+                <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Power BI</span> <span class="skill-badge">Tableau</span></p>
                 <p class="project-description" style="text-align: left;">Another brief description of a data visualization project. <a href="#" class="read-more">Read more</a></p>
-            </div>
-            <div class="project-card">
+            </a>
+            <a href="#" class="project-card" onclick="event.stopPropagation();">
                 <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example Machine Learning Exploration 3</strong></h3>
-                <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Python</span>, <span class="skill-badge">Scikit-learn</span></p>
+                <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Python</span> <span class="skill-badge">Scikit-learn</span></p>
                 <p class="project-description" style="text-align: left;">A short description of a machine learning exploration. <a href="#" class="read-more">Read more</a></p>
-            </div>
-            <div class="project-card">
+            </a>
+            <a href="#" class="project-card" onclick="event.stopPropagation();">
                 <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example SQL-Based Analysis 4</strong></h3>
-                <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">SQL</span>, <span class="skill-badge">PostgreSQL</span></p>
+                <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">SQL</span> <span class="skill-badge">PostgreSQL</span></p>
                 <p class="project-description" style="text-align: left;">A description of a project focused on data retrieval and analysis using SQL. <a href="#" class="read-more">Read more</a></p>
-            </div>
+            </a>
         </section>
 
         <section id="education">
@@ -231,6 +237,7 @@
             </div>
             <div class="education-item" style="text-align: left;">
                 <h3 style="color: black; text-align: left;"><strong style="color: black;">Data Analytics</strong> Professional Foundations Certificate</h3>
+                <p style="color: black; text-align: left;">ALX Africa</p>
             </div>
         </section>
     </div>
