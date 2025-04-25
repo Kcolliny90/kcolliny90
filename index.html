@@ -65,10 +65,10 @@
         .skill-badge {
             background-color: #e9ecef;
             color: blue;
-            padding: 5px 8px;
-            border-radius: 3px;
-            margin-right: 3px;
-            margin-bottom: 3px;
+            padding: 5px 10px; /* Adjust padding for better rounded appearance */
+            border-radius: 15px; /* More pronounced rounded corners */
+            margin-right: 5px; /* Adjust spacing */
+            margin-bottom: 5px; /* Adjust spacing */
             display: inline-block;
             border: 1px solid #ccc;
             font-size: 0.9em;
@@ -103,30 +103,6 @@
             color: blue;
             text-decoration: none;
             font-size: 0.9em;
-        }
-        .project-details-view {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            background-color: #f9f9f9;
-            margin-top: 20px;
-        }
-        .project-details-view h3 {
-            margin-top: 0;
-        }
-        .back-to-projects {
-            display: inline-block;
-            padding: 8px 12px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            margin-top: 10px;
-            cursor: pointer;
-        }
-        .back-to-projects:hover {
-            background-color: #0056b3;
         }
         .education-item {
             margin-bottom: 15px;
@@ -184,9 +160,6 @@
             margin: 20px auto;
             max-width: 768px;
         }
-        #project-list {
-            display: block;
-        }
     </style>
 </head>
 <body>
@@ -229,33 +202,26 @@
 
         <section id="projects">
             <h2 style="color: black; text-align: left;">Projects</h2>
-            <div id="project-list">
-                <div class="project-card" onclick="showProjectDetails('project1')">
-                    <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example Data Analysis Project 1</strong></h3>
-                    <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Python</span> <span class="skill-badge">Pandas</span> <span class="skill-badge">Matplotlib</span></p>
-                    <p class="project-description" style="text-align: left;">A brief description of this project. <span class="read-more">Read more</span></p>
-                </div>
-                <div class="project-card" onclick="showProjectDetails('project2')">
-                    <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example Data Visualization Project 2</strong></h3>
-                    <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Power BI</span> <span class="skill-badge">Tableau</span></p>
-                    <p class="project-description" style="text-align: left;">Another brief description.</p>
-                </div>
-                <div class="project-card" onclick="showProjectDetails('project3')">
-                    <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example Machine Learning Exploration 3</strong></h3>
-                    <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Python</span> <span class="skill-badge">Scikit-learn</span></p>
-                    <p class="project-description" style="text-align: left;">A short description.</p>
-                </div>
-                <div class="project-card" onclick="showProjectDetails('project4')">
-                    <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example SQL-Based Analysis 4</strong></h3>
-                    <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">SQL</span> <span class="skill-badge">PostgreSQL</span></p>
-                    <p class="project-description" style="text-align: left;">A description of a SQL project.</p>
-                </div>
-            </div>
-            <div id="project-detail-view" style="display: none;">
-                <h3 id="project-detail-title"></h3>
-                <div id="project-detail-content"></div>
-                <a href="#projects" class="back-to-projects" onclick="showProjectList()">Back to Projects</a>
-            </div>
+            <a href="project1.html" class="project-card">
+                <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example Data Analysis Project 1</strong></h3>
+                <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Python</span> <span class="skill-badge">Pandas</span> <span class="skill-badge">Matplotlib</span></p>
+                <p class="project-description" style="text-align: left;">A brief description of this project. <span class="read-more">Read more</span></p>
+            </a>
+            <a href="project2.html" class="project-card">
+                <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example Data Visualization Project 2</strong></h3>
+                <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Power BI</span> <span class="skill-badge">Tableau</span></p>
+                <p class="project-description" style="text-align: left;">Another brief description.</p>
+            </a>
+            <a href="project3.html" class="project-card">
+                <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example Machine Learning Exploration 3</strong></h3>
+                <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">Python</span> <span class="skill-badge">Scikit-learn</span></p>
+                <p class="project-description" style="text-align: left;">A short description.</p>
+            </a>
+            <a href="project4.html" class="project-card">
+                <h3 style="color: black; font-weight: bold; text-align: left;"><strong>Example SQL-Based Analysis 4</strong></h3>
+                <p class="project-tools" style="text-align: left;">Tools: <span class="skill-badge">SQL</span> <span class="skill-badge">PostgreSQL</span></p>
+                <p class="project-description" style="text-align: left;">A description of a SQL project.</p>
+            </a>
         </section>
 
         <section id="education">
@@ -265,7 +231,7 @@
                 <p style="color: black; text-align: left;">Makerere University</p>
             </div>
             <div class="education-item" style="text-align: left;">
-                <h3 style="color: black; text-align: left;"><strong style="color: black;">Data Analytics</strong> Professional Foundations Certificate</h3>
+                <h3 style="color: black; text-align: left;"><strong style="color: black;">Data Analytics</strong></h3>
                 <p style="color: black; text-align: left;">ALX Africa</p>
             </div>
         </section>
@@ -280,76 +246,23 @@
     </button>
 
     <script>
-        const projectData = {
-            "project1": {
-                "title": "Example Data Analysis Project 1",
-                "tools": ["Python", "Pandas", "Matplotlib"],
-                "description": "A brief description of this example data analysis project.",
-                "details": "<p>This is the detailed information for Example Data Analysis Project 1. You can include more specifics about the problem, methodology, findings, and any relevant links or visuals here.</p>"
-            },
-            "project2": {
-                "title": "Example Data Visualization Project 2",
-                "tools": ["Power BI", "Tableau"],
-                "description": "Another brief description.",
-                "details": "<p>Here are the comprehensive details for Example Data Visualization Project 2. Talk about the data sources, the types of visualizations created, and the insights gained.</p>"
-            },
-            "project3": {
-                "title": "Example Machine Learning Exploration 3",
-                "tools": ["Python", "Scikit-learn"],
-                "description": "A short description.",
-                "details": "<p>Dive into the specifics of Example Machine Learning Exploration 3. Explain the algorithms used, the data preprocessing steps, and the results of your exploration.</p>"
-            },
-            "project4": {
-                "title": "Example SQL-Based Analysis 4",
-                "tools": ["SQL", "PostgreSQL"],
-                "description": "A description of a SQL project.",
-                "details": "<p>Provide a thorough overview of Example SQL-Based Analysis 4. Describe the database schema, the queries you wrote, and the insights you derived from the data.</p>"
-            }
-        };
+        let scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-        const projectListDiv = document.getElementById('project-list');
-        const projectDetailViewDiv = document.getElementById('project-detail-view');
-        const projectDetailTitle = document.getElementById('project-detail-title');
-        const projectDetailContent = document.getElementById('project-detail-content');
+        window.onscroll = function() {scrollFunction()};
 
-        function showProjectDetails(projectId) {
-            const project = projectData[projectId];
-            if (project) {
-                projectDetailTitle.textContent = project.title;
-                projectDetailContent.innerHTML = project.details;
-                projectListDiv.style.display = 'none';
-                projectDetailViewDiv.style.display = 'block';
-                history.pushState({ projectId: projectId }, project.title, `/projects/${projectId}`);
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
             }
         }
 
-        function showProjectList() {
-            projectListDiv.style.display = 'block';
-            projectDetailViewDiv.style.display = 'none';
-            history.pushState(null, "Projects", "/projects");
-        }
-
-        window.onpopstate = function(event) {
-            if (event.state && event.state.projectId) {
-                const projectId = event.state.projectId;
-                showProjectDetails(projectId);
-            } else {
-                showProjectList();
-            }
-        };
-
-        // Initialize the page to show the project list
-        if (window.location.pathname.startsWith('/projects/')) {
-            const projectIdFromUrl = window.location.pathname.split('/').pop();
-            if (projectData[projectIdFromUrl]) {
-                showProjectDetails(projectIdFromUrl);
-            } else {
-                showProjectList();
-                history.replaceState(null, "Projects", "/projects"); // Clean up invalid URL
-            }
-        } else if (window.location.pathname === '/' || window.location.pathname === '/projects') {
-            showProjectList();
-            history.replaceState(null, "Projects", "/projects"); // Ensure consistent URL
+        scrollToTopBtn.onclick = function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
         }
     </script>
 
