@@ -1,5 +1,5 @@
 ## 🙋‍♂️Introducing myself
-——————————————————————————————————————————————————————————————————
+————————————————————————————————————————————————————————————————
 ⭐ Data Analyst | Business Intelligence Professional
 
 Hello! I'm Collin, a data analyst, with experstise in leveraging advanced analytics, predictive modeling, and visualization to uncover valuable insgihts and drive impactful decisions.
