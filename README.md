@@ -14,6 +14,7 @@ Welcome to my portfolio, where I showcase my projects, and achievements in data 
 • Data Analysis: Analyze complex datasets (within any industry) to identufy trends and patterns using Spreadsheets.
 • Data Visualization: Create insightful visualizations using Power BI.
 • SQL & Database Management: Query and manage data across various database systems using SQL.
+
 ———————————————————————
 
 💼Portfolio 👇
