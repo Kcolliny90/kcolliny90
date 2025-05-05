@@ -12,12 +12,15 @@ Welcome to my portfolio, where I showcase my projects, and achievements in data 
 
 ⚡ Core Competencies
 
-• Data Analysis: Analyze complex datasets (within any industry) to identufy trends and patterns using Spreadsheets.
+• Data Analysis: Analyze complex datasets (within any industry) to identify trends and patterns using Spreadsheets.
+
 • Data Visualization: Create insightful visualizations using Power BI.
+
 • SQL & Database Management: Query and manage data across various database systems using SQL.
 ———————————————————————
 
 💼Portfolio 👇
+
 Disclaimer ⚠: The datasets, analyses, and reports presented in this portfolio are fictional, synthetic, and created solely for demoonstration purposes. They do not contain real proprietary, confidential, or sensitive information from any company, institution, or individual unless specified.
 These examples are designed to showcase my technical skills in data sciecne anda data analysis while adhering to ethical guidelines and respecting data privacy.
 <!--
