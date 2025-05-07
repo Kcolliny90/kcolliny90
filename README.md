@@ -9,7 +9,7 @@ I am detail-oriented, strategic, creative, and highly collaborative. These quali
 Welcome to my portfolio, where I showcase my projects, and achievements in data science and analytics.
 ———————————————————————
 
-⚡ Core Competencies
+⚡ **Core Competencies**
 
 • Data Analysis: Analyze complex datasets (within any industry) to identify trends and patterns using Spreadsheets.
 
@@ -18,14 +18,15 @@ Welcome to my portfolio, where I showcase my projects, and achievements in data 
 • SQL & Database Management: Query and manage data across various database systems using SQL.
 ———————————————————————
 
-💼Portfolio 👇
+💼**Portfolio** 👇
 
-Disclaimer ⚠:
+**Disclaimer** ⚠:
 
-⚠Important Notice for GitHub Visitors
+⚠**Important Notice for GitHub Visitors**:
+
 The code and projects in my repositories may include simulations of real-world data science and analytics tasks, as well as actual projects with real data. While some datasets, analyses, and reports are fictional or synthetic, others may be based on real-world data and scenarios.
 
-💡What does this mean?
+💡**What does this mean?**
 
 • Some data used in these projects may be synthetic or fictional.
 
@@ -35,7 +36,7 @@ The code and projects in my repositories may include simulations of real-world d
 
 • The practices and methodologies demonstrated are reflective of my actual skills and approaches.
 
-💡Purpose
+💡**Purpose**
 
 These projects showcase my technical abilities, problem-solving approaches, and expertise in data science and analysis, while adhering to ethical guidelines and respecting data privacy.
 <!--
