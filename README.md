@@ -1,11 +1,5 @@
 ## 🙋‍♂️Introducing myself
 ———————————————————————
-⭐ Data Analyst | Business Intelligence Professional
-
-Hello! I'm Collin, a data analyst, with experstise in leveraging advanced analytics, predictive modeling, and visualization to uncover valuable insgihts and drive impactful decisions.
-
-I am detail-oriented, strategic, creative, and highly collaborative. These qualities form the foundation of my work, enabling me to translate complex complex data into meaningful insights that inform decision-making and optimize outcomes.
-
 Welcome to my portfolio, where I showcase my projects, and achievements in data science and analytics.
 ———————————————————————
 
