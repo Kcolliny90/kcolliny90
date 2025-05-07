@@ -20,8 +20,8 @@ Welcome to my portfolio, where I showcase my projects, and achievements in data 
 
 💼Portfolio 👇
 
-Disclaimer ⚠: The datasets, analyses, and reports presented in this portfolio are fictional, synthetic, and created solely for demonstration purposes. They do not contain real proprietary, confidential, or sensitive information from any company, institution, or individual unless specified.
-These examples are designed to showcase my technical skills in data science anda data analysis while adhering to ethical guidelines and respecting data privacy.
+Disclaimer ⚠: The activities in these repositories are simulations of real world data science and analytics processes. The datasets, analyses, and reports presented in this portfolio are fictional, synthetic, and created solely for demonstration purposes. They do not contain real proprietary, confidential, or sensitive information from any company, institution, or individual unless specified.
+These examples are designed to showcase my technical skills in data science and data analysis while adhering to ethical guidelines and respecting data privacy.
 <!--
 **Kcolliny90/kcolliny90** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
