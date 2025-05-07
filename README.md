@@ -1,5 +1,4 @@
 ## 🙋‍♂️Introducing myself
-———————————————————————
 Welcome to my portfolio, where I showcase my projects, and achievements in data science and analytics.
 ———————————————————————
 
