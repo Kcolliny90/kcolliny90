@@ -2,7 +2,6 @@
 
 **Disclaimer** ⚠:
 ———————————————————————
-
 ⚠**Important Notice for GitHub Visitors**:
 
 The code and projects in my repositories may include simulations of real-world data science and analytics tasks, as well as actual projects with real data. While some datasets, analyses, and reports are fictional or synthetic, others may be based on real-world data and scenarios.
