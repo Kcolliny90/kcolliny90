@@ -8,6 +8,7 @@
 The code and projects in my repositories may include simulations of real-world data science and analytics tasks, as well as actual projects with real data. While some datasets, analyses, and reports are fictional or synthetic, others may be based on real-world data and scenarios.
 
 💡**What does this mean?**
+———————————————————————
 
 • Some data used in these projects may be synthetic or fictional.
 
@@ -18,6 +19,7 @@ The code and projects in my repositories may include simulations of real-world d
 • The practices and methodologies demonstrated are reflective of my actual skills and approaches.
 
 💡**Purpose**
+———————————————————————
 
 These projects showcase my technical abilities, problem-solving approaches, and expertise in data science and analysis, while adhering to ethical guidelines and respecting data privacy.
 <!--
