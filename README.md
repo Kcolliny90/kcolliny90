@@ -1,19 +1,7 @@
-## 🙋‍♂️Introducing myself
-Welcome to my portfolio, where I showcase my projects, and achievements in data science and analytics.
-———————————————————————
-
-⚡ **Core Competencies**
-
-• Data Analysis: Analyze complex datasets (within any industry) to identify trends and patterns using Spreadsheets.
-
-• Data Visualization: Create insightful visualizations using Power BI.
-
-• SQL & Database Management: Query and manage data across various database systems using SQL.
-———————————————————————
-
 💼**Portfolio** 👇
 
 **Disclaimer** ⚠:
+———————————————————————
 
 ⚠**Important Notice for GitHub Visitors**:
 
